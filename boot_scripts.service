@@ -1,0 +1,10 @@
+[Unit]
+Description=Run script at boot as root
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/boot_script.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
