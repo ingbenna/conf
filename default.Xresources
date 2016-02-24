@@ -1,0 +1,167 @@
+urxvt*internalBorder: 0
+!urxvt*loginShell: true
+urxvt*colorMode: on
+
+! --//Cursor\\--
+urxvt*cursorBlink: true
+urxvt*cursorUnderline: true
+!urxvt*cursorColor: #8a9bbd
+!urxvt*underlineColor: #8a9bbd
+!urxvt*highlightColor: #8a9bbd
+!urxvt*highlightTextColor: #1c1c1c
+urxvt*depth: 32
+
+! --//Bell Alarm\\--
+
+URxvt.urgentOnBell: True
+
+! --//Color scheme\\--
+
+URxvt*background: #080808
+URxvt*foreground: #1cf913
+!URxvt*foreground: #a9a9a9
+
+! tentativo mal riuscito di terminale chiaro
+!URxvt*background: #989898
+!URxvt*foreground: #000000
+
+! black 
+URxvt*color0: #040404
+URxvt*color8: #666666
+! red
+URxvt*color1: #F62817
+URxvt*color9: #f87f36
+! green
+URxvt*color2: #1d871d
+URxvt*color10: #56ba56
+! yellow
+URxvt*color3: #dec229
+URxvt*color11: #e5d868
+! blue
+URxvt*color4: #3273b5
+URxvt*color12: #5686b3
+! magenta
+URxvt*color5: #9a31c1
+URxvt*color13: #d462ff
+! cyan
+URxvt*color6: #699ebf
+URxvt*color14: #96bfbf
+! white
+URxvt*color7: #b5b5b5
+URxvt*color15: #dcdcdc
+
+! xft - config:
+URxvt.letterSpace: 0.5
+!URxvt.letterSpace: -1
+Xft.dpi:        102
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hinstyle:   hintslight
+
+! -- Fonts -- !
+URxvt*font:xft:Fixed:pixelsize=14
+!URxvt*font:xft:Eras Medium ITC:pixelsize=10
+!URxvt*boldFont:xft:terminus:pixelsize=10:bold
+!urxvt*bolditalicFont:xft:terminus:pixelsize=10:bold:italic
+!urxvt*italicFont:xft:terminus:pixelsize=10:italic
+
+! -- Perl extension -- !
+URxvt.perl-ext-common:      default,clipboard,url-select,keyboard-select
+URxvt.url-select.launcher:  firefox
+URxvt.url-select.underline: true
+URxvt.keysym.M-u:           perl:url-select:select_next
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+URxvt.keysym.M-s:           perl:keyboard-select:search
+
+
+
+! Sfumare testo terminali in secondo piano !
+URxvt.fading: 10
+URxvt.fadeColor: #080808
+
+! Pearl URL extension:
+!URxvt*perl-ext-common:  default,selection,mark-yank-urls,matcher,clipboard
+!URxvt*perl-lib: /usr/lib/urxvt/perl
+!URxvt*perl-ext-common: default,matcher,keyboard-select,url-select,clipboard
+!URxvt*url-launcher: /usr/bin/firefox
+!URxvt*matcher.pattern.1: \\bwww\\.[\\w-]\\.[\\w./?&@#-]*[\\w/-]
+!!urxvt*matcher.button: 1!
+!1URxvt*matcher.rend.0: fg6
+!URxvt*underlineURLs: true
+!URxvt.keysym.M-u:    perl:url-select:select_next
+!URxvt.keysym.M-u:    perl:keyboard-select
+
+! Tabelle:
+!urxvt*perl-ext-common: default,tabbed
+!URxvt*tabbed.tabbar-fg: 7
+!URxvt*tabbed.tabbar-bg: 8
+!URxvt*tabbed.tab-fg: fg
+!URxvt*tabbed.tab-bg: 4
+!URxvt*tabbed.title-fg: fg
+!URxvt*tabbed.title-bg: 4
+
+! Scrollbar:
+urxvt*scrollBar: false 
+!scrollbar styles: rxvt, plain, next or xterm
+!urxvt*scrollstyle: plain
+!urxvt*scrollBar_right: true
+!urxvt*scrollColor: #777777
+urxvt*geometry: 120x28
+urxvt*saveLines: 2000
+
+!transparent
+!URxvt.inheritPixmap: 1    #trasparenza
+!URxvt.shading: 30              #indice di trasparenza, modificare a piacimento
+
+!Xcursor
+Xcursor.theme: FlatbedCursors.Black.Small
+
+!!Xcalc
+!{{{ Xcalc
+xcalc*name: xcalc
+xcalc*geometry:             200x275
+xcalc.ti.bevel.background:      #101010
+xcalc.ti.bevel.screen.background:   #000000
+xcalc.ti.bevel.screen.DEG.background:   #000000
+xcalc.ti.bevel.screen.DEG.foreground:   LightSeaGreen
+xcalc.ti.bevel.screen.GRAD.background:  #000000
+xcalc.ti.bevel.screen.GRAD.foreground:  LightSeaGreen
+xcalc.ti.bevel.screen.RAD.background:   #000000
+xcalc.ti.bevel.screen.RAD.foreground:   LightSeaGreen
+xcalc.ti.bevel.screen.INV.background:   #000000
+xcalc.ti.bevel.screen.INV.foreground:   Red
+xcalc.ti.bevel.screen.LCD.background:   #000000
+xcalc.ti.bevel.screen.LCD.foreground:   LightSeaGreen
+xcalc.ti.bevel.screen.LCD.shadowWidth:  0
+xcalc.ti.bevel.screen.M.background: #000000
+xcalc.ti.bevel.screen.M.foreground: LightSeaGreen
+xcalc.ti.bevel.screen.P.background: #000000
+xcalc.ti.bevel.screen.P.foreground: Yellow
+xcalc.ti.Command.foreground:    White
+xcalc.ti.Command.background:    #777777
+xcalc.ti.button5.background:    Orange3
+xcalc.ti.button19.background:   #611161
+xcalc.ti.button18.background:   #611161
+xcalc.ti.button20.background:   #611111
+!uncomment to change label on division button
+xcalc.ti.button20.label:    /
+xcalc.ti.button25.background:   #722222
+xcalc.ti.button30.background:   #833333
+xcalc.ti.button35.background:   #944444
+xcalc.ti.button40.background:   #a55555
+xcalc.ti.button22.background:   #222262
+xcalc.ti.button23.background:   #222262
+xcalc.ti.button24.background:   #222272
+xcalc.ti.button27.background:   #333373
+xcalc.ti.button28.background:   #333373
+xcalc.ti.button29.background:   #333373
+xcalc.ti.button32.background:   #444484
+xcalc.ti.button33.background:   #444484
+xcalc.ti.button34.background:   #444484
+xcalc.ti.button37.background:   #555595
+xcalc.ti.button38.background:   #555595
+xcalc.ti.button39.background:   #555595
+XCalc*Cursor:           hand2
+XCalc*ShapeStyle:       rectangle
+!!! fine Xcalc
