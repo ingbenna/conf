@@ -1,12 +1,13 @@
 #!/bin/zsh
 
-status_wifi=$(awk '/wifi/{print $3}' <<< $(nmcli dev))
+#status_wifi=$(awk '/wifi/{print $3}' <<< $(nmcli dev))
+status_wifi=$(nmcli radio wifi)
 
-if [ $status_wifi = "collegato" ]; then
-	nmcli r wifi off
+if [ $status_wifi = "abilitato" ]; then
+	nmcli radio wifi off
 	notify-send "WIFI OFF"
 else
-	nmcli r wifi on
+	nmcli radio wifi on
 	notify-send "WIFI ON"
 fi
 exit 0
