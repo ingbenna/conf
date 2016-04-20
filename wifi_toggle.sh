@@ -11,4 +11,3 @@ else
 	notify-send "WIFI ON"
 fi
 exit 0
-
