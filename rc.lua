@@ -86,7 +86,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000" }, s, 
+    tags[s] = awful.tag({ "1", "2", "3", "4", "5", "6", "7", "8" }, s, 
 layouts[1])
 end
 -- }}}
@@ -288,9 +288,14 @@ globalkeys = awful.util.table.join(
 -- Lock con slock
 	awful.key({ altkey }, "l", function () awful.util.spawn("slock") end),
 -- Controlli volume tramite pulseaudio
-	awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pulseaudio-ctl up") end),
-	awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pulseaudio-ctl down") end),
+	awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pulseaudio-ctl up") awful.util.spawn("/usr/local/bin/volume_percentage.zsh") end),
+	awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pulseaudio-ctl down") awful.util.spawn("/usr/local/bin/volume_percentage.zsh") end),
 	awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pulseaudio-ctl mute") end),
+--	mpc for mpd control
+	awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") awful.util.spawn("notify-send 'Play/Pause'") end),
+	awful.key({ }, "XF86AudioNext", function () awful.util.spawn("mpc next") awful.util.spawn("notify-send 'Next song'") end),
+	awful.key({ }, "XF86AudioPrev", function () awful.util.spawn("mpc prev") awful.util.spawn("notify-send 'Previous song'") end),
+	awful.key({ }, "XF86AudioStop", function () awful.util.spawn("mpc stop") awful.util.spawn("notify-send 'Stop stream'") end),
 -- Toggle del touchpad
 	awful.key({ }, "XF86TouchpadToggle", function() awful.util.spawn("/usr/local/bin/touchpad_toggle.sh") end),
 -- Brightness
@@ -559,3 +564,4 @@ awful.util.spawn_with_shell("killall nm-applet; nm-applet")
 --awful.util.spawn_with_shell("dropbox")
 awful.util.spawn_with_shell("killall xautolock; xautolock -time 1 -locker slock")
 --awful.util.spawn_with_shell("killall touchegg; touchegg")
+awful.util.spawn_with_shell("killall compton; compton --config /home/padme/.config/compton.conf -b")
