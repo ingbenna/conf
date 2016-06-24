@@ -290,7 +290,7 @@ globalkeys = awful.util.table.join(
 -- Controlli volume tramite pulseaudio
 	awful.key({ }, "XF86AudioRaiseVolume", function () awful.util.spawn("pulseaudio-ctl up") awful.util.spawn("/usr/local/bin/volume_percentage.zsh") end),
 	awful.key({ }, "XF86AudioLowerVolume", function () awful.util.spawn("pulseaudio-ctl down") awful.util.spawn("/usr/local/bin/volume_percentage.zsh") end),
-	awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pulseaudio-ctl mute") end),
+	awful.key({ }, "XF86AudioMute", function () awful.util.spawn("pulseaudio-ctl mute") awful.util.spawn("/usr/local/bin/muted.zsh") end),
 --	mpc for mpd control
 	awful.key({ }, "XF86AudioPlay", function () awful.util.spawn("mpc toggle") awful.util.spawn("notify-send 'Play/Pause'") end),
 	awful.key({ }, "XF86AudioNext", function () awful.util.spawn("mpc next") awful.util.spawn("notify-send 'Next song'") end),
